@@ -235,7 +235,6 @@ body {
 }
 
 #product1 .pro {
-  position: relative;
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
@@ -245,6 +244,7 @@ body {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   margin: 15px 0;
   transition: 0.2s ease;
+  position: relative;
 }
 
 #product1 .pro:hover {
@@ -284,10 +284,7 @@ body {
   color: #088178;
 }
 
-#product1 .pro .cart::before {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+#product1 .pro .cart {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -296,6 +293,9 @@ body {
   font-weight: 500;
   color: #088178;
   border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
 }
 
 #product1 i {
@@ -580,7 +580,8 @@ footer .copyright {
   }
 
   #close {
-    display: initial;
+ /* display iniital will be displayed according to the default behaviour => (display:inline or block) specified for its type */
+    display:initial;
     position: absolute;
     top: 30px;
     left: 30px;
